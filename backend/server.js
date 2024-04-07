@@ -8,14 +8,6 @@ import messageRoutes from "./routes/message.routes.js";
 import userRoutes from "./routes/user.routes.js";
 import {app, server} from "./socket/socket.js"
 
-// for deployment
-import path from "path";
-const __dirname = path.resolve();
-app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
-app.get("*", (req, res) => {
-	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
-});
 
 const PORT = process.env.PORT || 8000 ; 
 
@@ -27,6 +19,15 @@ app.use(cookieParser()); // calling it to access of cookie: to extract the token
 app.use('/api/auth', authRoutes);  // /api/auth --> acts like prefix of routes
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
+
+// for deployment
+import path from "path";
+const __dirname = path.resolve();
+app.use(express.static(path.join(__dirname, "/frontend/dist")));
+
+app.get("*", (req, res) => {
+	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+});
 
 server.listen(PORT, () => {
     connectToMongoDB();
