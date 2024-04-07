@@ -20,15 +20,14 @@ app.use('/api/auth', authRoutes);  // /api/auth --> acts like prefix of routes
 app.use("/api/messages", messageRoutes);
 app.use("/api/users", userRoutes);
 
-// for deployment
+// for deployment...........
 import path from "path";
 const __dirname = path.resolve();
 app.use(express.static(path.join(__dirname, "/frontend/dist")));
-
 app.get("*", (req, res) => {
 	res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
 });
-
+//............
 server.listen(PORT, () => {
     connectToMongoDB();
   console.log(`Server running on port ${PORT}`);
