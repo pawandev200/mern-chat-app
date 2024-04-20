@@ -9,6 +9,7 @@ Welcome to my chat app! I'm thrilled to introduce you to a next-generation, real
 - Database: MongoDB
 - Authentication: JWT (JSON Web Tokens)
 - Real-Time Messaging: Socket.io
+- Deployment: Render 
 ## Features
 
 - User Authentication: Secure user authentication system with JWT (JSON Web Tokens) ensures user login and access control.
