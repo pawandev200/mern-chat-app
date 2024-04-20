@@ -1,7 +1,7 @@
 
 # Real Time Chat App
 
-Welcome to Chatify! A next-generation real-time chat application designed to bring people together, foster collaboration, and facilitate seamless communication. With its intuitive interface, robust features, and secure architecture, Chatify offers an unparalleled chatting experience.
+Welcome to my chat app! I'm thrilled to introduce you to a next-generation, real-time chat application designed to unite people and enable seamless communication. Featuring an intuitive interface, robust features, and secure architecture.
 ## Tech stack
 
 - Frontend: React.js, TailwindCSS, Daisy UI
